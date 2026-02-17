@@ -1,0 +1,44 @@
+{
+  "name": "OpenClaw",
+  "slug": "openclaw",
+  "categories": [
+    20
+  ],
+  "date_created": "2026-02-17",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 18789,
+  "documentation": "https://docs.openclaw.ai/",
+  "website": "https://openclaw.ai/",
+  "logo": "https://openclaw.ai/favicon.ico",
+  "config_path": "/opt/openclaw.env",
+  "description": "OpenClaw is an open-source AI coding and automation assistant that runs as a local gateway with optional dashboard access. It lets you connect model providers and run structured agent workflows from a CLI and web interface.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/openclaw.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 2048,
+        "hdd": 20,
+        "os": "debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "A gateway token is generated in `/opt/openclaw.env` (`OPENCLAW_GATEWAY_TOKEN`) for LAN access on port `18789`.",
+      "type": "info"
+    },
+    {
+      "text": "Run `openclaw onboard` in the container shell to complete provider onboarding after deployment.",
+      "type": "info"
+    }
+  ]
+}
