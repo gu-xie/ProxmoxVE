@@ -19,7 +19,7 @@ $STD apt-get install -y \
   openssl
 msg_ok "Installed Dependencies"
 
-NODE_VERSION="22" setup_nodejs
+NODE_VERSION="24" setup_nodejs
 
 msg_info "Installing Build Dependencies"
 $STD apt-get install -y \
